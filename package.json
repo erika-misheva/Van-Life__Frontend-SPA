@@ -21,5 +21,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
   }
 }
