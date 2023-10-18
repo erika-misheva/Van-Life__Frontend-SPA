@@ -1,5 +1,6 @@
 import React from 'react'
 import { useOutletContext } from "react-router-dom"
+import '../../styles/hostVanPrice.css'
 
 export default function HostVanPricing(){
     const { currentVan } = useOutletContext()

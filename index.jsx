@@ -24,7 +24,11 @@ import HostVanInfo from './pages/Host/HostVanInfo';
 import NotFound from './pages/NotFound';
 import Error from './Error';
 import Login, { loader as loginLoader, action as loginAction } from './pages/Login';
+import SignUp, {loader as signUpLoader, action as signingUpAction} from './pages/SignUp'
 import {requireAuth} from './utils';
+import ForgotPassword, { action as forgotPasswordAction} from './pages/ForgotPassword';
+import AddHostVan, {action as addVanAction} from './pages/Host/AddHostVan';
+import EditHostVan, {loader as editHostVanLoader, action as editVanAction} from './pages/Host/EditHostVan';
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -32,13 +36,18 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path="about" element={<About />} />
     <Route path='login' element={<Login />} loader={loginLoader} action={loginAction}/>
+    <Route path='signUp' element={<SignUp />} loader={signUpLoader} action={signingUpAction}/>
+    <Route path='forgot-password' element={<ForgotPassword />} action={forgotPasswordAction}/>
     <Route path="vans" element={<Vans />} loader={vanLoader} errorElement={<Error />} />
     <Route path="vans/:id" element={<VanDetail />} loader={vanDetailLoader} errorElement={<Error />}/>
     <Route path="*" element={<NotFound />} />
 
     <Route path="host" element={<HostLayout />}  >
-      <Route index element={<Dashboard />}
-       loader={dashboardLoader} />
+    <Route
+        index
+        element={<Dashboard />}
+        loader={dashboardLoader}
+      />
       <Route path="income" element={<Income />}
        loader={async ({ request }) => await requireAuth(request)} />
       <Route path="reviews" element={<Reviews />}
@@ -48,7 +57,9 @@ const router = createBrowserRouter(createRoutesFromElements(
           hostVanLoader
         }  
         errorElement={<Error />}/>
-
+        <Route path="editvan/:id" element={<EditHostVan />}
+        loader={editHostVanLoader} action={editVanAction}
+        errorElement={<Error />}></Route>
       <Route path="vans/:id" element={<HostVansDetails />}
         loader={hostVansDetailsLoader}
         errorElement={<Error />}>
@@ -59,6 +70,8 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="photos" element={<HostVanPhotos />}
          loader={async ({ request }) => await requireAuth(request)} />
       </Route>
+      <Route path="addVan" element={<AddHostVan />}
+      action={addVanAction}/>
 
     </Route>
   </Route>

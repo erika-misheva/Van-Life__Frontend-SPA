@@ -1,0 +1,79 @@
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+    width: 100%;
+}
+
+header .site-logo {
+    color: black;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 600;
+    padding: 5px 20px;
+}
+
+header a:hover {
+    color: #161616;
+    text-decoration: underline;
+}
+
+header .login-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+header .logout-icon {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+header .login-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.link-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: .75rem 1.375rem;
+    color: initial;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+}
+
+.link-button:hover {
+    transform: translate(1px, 1px);
+}
+@media only screen and (max-width: 500px) {
+    header .site-logo{
+      font-size: 1.25rem;
+      
+    }
+    header a {
+        font-size: 0.8rem;
+    }
+    header{
+        flex-direction: column;
+        height: fit-content;
+        flex-wrap: nowrap;
+    }
+  } 

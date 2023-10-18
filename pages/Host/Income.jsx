@@ -1,4 +1,5 @@
 import React from "react"
+import '../../styles/hostIncome.css'
 
 export default function Income() {
     const transactionsData = [

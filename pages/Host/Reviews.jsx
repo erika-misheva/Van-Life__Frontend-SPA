@@ -1,5 +1,6 @@
 import React from "react"
 import { BsStarFill } from "react-icons/bs"
+import '../../styles/hostReviews.css'
 
 export default function Reviews() {
     const reviewsData = [
@@ -20,7 +21,7 @@ export default function Reviews() {
     ]
     
     return (
-        <section className="host-reviews">
+        <section className="host-reviews" id="height-matched">
             <div className="top-text">
                 <h2>Your reviews</h2>
                 <p>

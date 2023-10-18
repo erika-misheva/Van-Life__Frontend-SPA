@@ -1,0 +1,27 @@
+.host-nav {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.host-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 500px) {
+    .host-nav {
+        display: flex;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        padding: 5px 10px;
+    }
+  
+  } 

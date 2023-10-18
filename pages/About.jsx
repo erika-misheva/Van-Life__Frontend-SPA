@@ -1,6 +1,7 @@
 import React from "react"
 import bgImg from "../assets/images/181099.webp"
 import { Link } from "react-router-dom"
+import '../styles/about.css'
 
 export default function About() {
     return (

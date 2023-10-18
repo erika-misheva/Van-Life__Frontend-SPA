@@ -7,7 +7,7 @@ export default function Layout(){
     return (
         <> 
         <Header/>
-        <Outlet />
+        <Outlet  className="myCustomStyle"/>
         <Footer/>
         </>
        

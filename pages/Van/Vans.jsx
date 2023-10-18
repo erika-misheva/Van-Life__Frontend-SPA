@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { getVans } from "../../api"
 import { Link, useSearchParams, useLoaderData, defer, Await } from 'react-router-dom';
-
+import '../../styles/vans.css'
 
 export function loader() {
     return defer({ vans: getVans() })
@@ -11,8 +11,6 @@ export default function Vans() {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const dataPromise = useLoaderData();
-
-
     const typeFilter = searchParams.get('type')
 
 

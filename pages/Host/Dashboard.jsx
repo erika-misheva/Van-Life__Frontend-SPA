@@ -3,15 +3,17 @@ import { Link, defer, Await, useLoaderData } from "react-router-dom"
 import { getHostVans } from "../../api"
 import { requireAuth } from "../../utils"
 import { BsStarFill } from "react-icons/bs"
+import '../../styles/hostDashboard.css'
 
 export async function loader({ request }) {
     await requireAuth(request)
- 
-    return defer({ vans: getHostVans() })
+    return defer({ vans: getHostVans() })  
 }
 
 export default function Dashboard() {
-    const loaderData = useLoaderData()
+    
+    const loaderData = useLoaderData();
+   
 
     function renderVanElements(vans) {
         const hostVansEls = vans.map((van) => (
@@ -33,8 +35,8 @@ export default function Dashboard() {
     }
 
     return (
-        <>
-            <section className="host-dashboard-earnings">
+        <div id="height-matched"> <React.Suspense fallback={<h3>Loading...</h3>}>
+            <section className="host-dashboard-earnings" >
                 <div className="info">
                     <h1>Welcome!</h1>
                     <p>Income last <span>30 days</span></p>
@@ -55,10 +57,9 @@ export default function Dashboard() {
                     <h2>Your listed vans</h2>
                     <Link to="vans">View all</Link>
                 </div>
-                <React.Suspense fallback={<h3>Loading...</h3>}>
-                    <Await resolve={loaderData.vans}>{renderVanElements}</Await>
-                </React.Suspense>
             </section>
-        </>
+            <Await resolve={loaderData.vans}>{renderVanElements}</Await>
+            </React.Suspense>
+        </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Link, useLocation, useLoaderData, defer, Await } from "react-router-dom";
 import { getVan} from "../../api";
+import '../../styles/vanDetail.css'
 
 export function loader({ params }) {
     return defer({ van: getVan(params.id) })

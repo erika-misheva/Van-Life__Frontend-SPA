@@ -1,0 +1,111 @@
+.host-vans-list {
+    padding-inline: 26px;
+}
+
+.hostVanAddButton {
+    margin-left: 2%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #62d54a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4494db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 2%;
+}
+
+.deleteButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f53030;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hostVanAddButton:hover,
+.hostVanAddButton.selected {
+    background-color: #42b72a;
+}
+
+.editButton:hover,
+.editButton.selected {
+    background-color: #0074d9;
+}
+
+.deleteButton:hover,
+.deleteButton.selected {
+    background-color: #ff0000;
+}
+
+.host-vans-title {
+    padding-inline: 26px;
+}
+
+.host-van-single {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 15px;
+    padding-block: 18px;
+    padding-left: 24px;
+}
+
+.host-van-link-wrapper {
+    color: unset;
+    text-decoration: unset;
+}
+
+.host-van-single>img {
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 17px;
+}
+.host-van-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block: 10px;
+}
+
+.host-van-info p {
+    margin-block: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .hostVanAddButton{
+        font-size:1rem;
+        margin-left: 9%;
+        margin-bottom: 5%;
+    }
+    .host-van-single{
+        flex-wrap: wrap;
+        
+    }
+    .deleteButton, .editButton{
+        margin-top: 4%;
+        padding: 5px 10px;
+    }
+    
+  } 

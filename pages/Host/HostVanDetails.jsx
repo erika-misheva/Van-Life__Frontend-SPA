@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet, Link, NavLink, useLoaderData } from 'react-router-dom';
 import { getVan } from '../../api';
 import { requireAuth } from '../../utils';
+import '../../styles/hostVanDetail.css'
 
 export async function loader({ params, request }) {
     await requireAuth(request);
@@ -18,7 +19,7 @@ export default function HostVansDetails() {
     }
 
     return (
-        <section>
+        <section id="height-matched">
             <Link
                 to=".."
                 relative='path'
