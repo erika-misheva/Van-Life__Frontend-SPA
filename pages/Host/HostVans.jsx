@@ -1,14 +1,18 @@
 import React, { Suspense } from "react"
-import { Link, useLoaderData, defer, Await } from "react-router-dom"
+import { Link, useLoaderData, defer, Await, redirect } from "react-router-dom"
 import { getHostVans, deleteVan } from "../../api";
 import { requireAuth } from "../../utils";
-import EditHostVan from "./EditHostVan";
 import '../../styles/hostVans.css'
 
-
 export async function loader({ request }) {
-    await requireAuth(request)
-    return defer({ vans: getHostVans() })
+    const resultAuth = await requireAuth(request);
+    console.log(resultAuth);
+    if (resultAuth) {
+        return redirect(resultAuth);
+    } else{
+        return defer({ vans: getHostVans() })
+    }
+    
 }
 
 export default function HostVans() {

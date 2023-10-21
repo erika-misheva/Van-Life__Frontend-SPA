@@ -1,19 +1,25 @@
 import React from "react"
-import { Link, defer, Await, useLoaderData } from "react-router-dom"
+import { Link, defer, Await, useLoaderData, redirect } from "react-router-dom"
 import { getHostVans } from "../../api"
 import { requireAuth } from "../../utils"
 import { BsStarFill } from "react-icons/bs"
 import '../../styles/hostDashboard.css'
 
 export async function loader({ request }) {
-    await requireAuth(request)
-    return defer({ vans: getHostVans() })  
+    const resultAuth = await requireAuth(request);
+    console.log(resultAuth);
+    if (resultAuth) {
+        return redirect(resultAuth);
+    } else{
+     return defer({ vans: getHostVans() })   
+    }
+    
 }
 
 export default function Dashboard() {
-    
+
     const loaderData = useLoaderData();
-   
+
 
     function renderVanElements(vans) {
         const hostVansEls = vans.map((van) => (
@@ -59,7 +65,7 @@ export default function Dashboard() {
                 </div>
             </section>
             <Await resolve={loaderData.vans}>{renderVanElements}</Await>
-            </React.Suspense>
+        </React.Suspense>
         </div>
     )
 }
