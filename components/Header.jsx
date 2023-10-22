@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import loginPhoto from '../assets/images/login-removebg-preview.png'
-// import { IoIosLogOut } from 'react-icons/io';
 import { RiLogoutCircleRLine } from 'react-icons/ri';
 import { userSignOut } from '../utils';
 import '../styles/header.css';
@@ -70,7 +69,6 @@ export default function Header() {
                         <img src={loginPhoto} className="login-icon" alt="Login" />
                     </Link>
                     <button onClick={userSignOut} className='signOut'>
-                        {/* <img src="../assets/images/logout.png" className="logout-icon" alt="Logout" /> */}
                         <RiLogoutCircleRLine size={30} />
                     </button>
             </nav>
