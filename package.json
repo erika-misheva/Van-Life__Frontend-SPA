@@ -2,6 +2,7 @@
   "name": "project",
   "dependencies": {
     "firebase": "^10.4.0",
+    "ionicons": "^7.2.1",
     "mirage.js": "^1.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
