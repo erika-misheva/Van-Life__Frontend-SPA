@@ -6,7 +6,6 @@ import '../../styles/hostVans.css'
 
 export async function loader({ request }) {
     const resultAuth = await requireAuth(request);
-    console.log(resultAuth);
     if (resultAuth) {
         return redirect(resultAuth);
     } else{
