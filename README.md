@@ -1,23 +1,16 @@
-# coe924bbe83c03b598d70a105
+# VANLIFE.
 
-Warning: Vite enforces using jsx syntax inside jsx/tsx files, so it will complain about that. Solution: rename `.js` files to `.jsx` :)
+VANLIFE is a small application designed for advertising vans that potential campers can book for their adventures. This README file provides an overview of the app's functionality and instructions on how to get started.
 
-Quick start:
+## Features
 
-```
-$ npm install
-$ npm start
-````
+* Van Listing: View a list of available vans for camping.
+* Host Dashboard: Hosts can log in, add their vans, and edit existing van listings.
+  
+Please note that the app currently does not support buying or booking vans but serves as a platform for van advertising and management.
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+## Getting Started
+To use this app and see the host feature you will need to sign up. Or you can use hello@test.com password: test1234
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
-Happy Coding!
