@@ -65,7 +65,7 @@ textarea {
 .wrapperDiv{
     width: 50%;
     min-height: fit-content;
-    height: 80vh;
+    min-height: fit-content;
     text-align: center;
     background: radial-gradient(circle, rgba(235, 248, 225, 0.4) 26%, rgba(246, 157, 60, 0.7) 100%);
 }
