@@ -4,7 +4,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: max-content;
+    min-height: fit-content;
+    overflow: scroll;
     background-image: url('../assets/images/3ad48f9e918a1f415dcc81c0b51c2a8a.jpg');
     background-size: 100%;
     background-position: center;
